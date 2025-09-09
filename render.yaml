@@ -3,6 +3,11 @@ services:
     name: vj-ai-store
     env: node
     plan: free
-    buildCommand: npm install
-    startCommand: npm start
+    buildCommand: "npm install"
+    startCommand: "npm start"
     branch: main
+    envVars:
+      - key: PAYPAL_CLIENT_ID
+        value: "REPLACE_WITH_PAYPAL_CLIENT_ID"
+      - key: PAYPAL_SECRET
+        value: "REPLACE_WITH_PAYPAL_SECRET"
